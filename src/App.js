@@ -27,10 +27,11 @@ class App extends Component {
     this.clearStack = this.clearStack.bind(this)
   }
 
-  addIngredient() {
-    this.setState((state) => {
-      var ingIdx = state.ingredients.indexOf(state.ingredient === this.props.ingredient)
-      return { stack: state.stack.push(state.ingredients[{ingIdx}]) }
+  addIngredient(ingredient) {
+    var ingred = this.state.stack;
+    ingred.push(ingredient)
+    this.setState({
+      ingred : ingred
     });
   }
 

@@ -3,7 +3,7 @@ import Ingredients from '../Ingredients/Ingredients';
 
 class IngredientList extends Component {
     render() {
-        var mappedIngredients = this.props.ingredients.map(ingredient => <Ingredients ingredient={ingredient} />)
+        var mappedIngredients = this.props.ingredients.map(ingredient => <Ingredients addIngredient={this.props.addIngredient} ingredient={ingredient} />)
         // pass in addIngredient
         return (
         <div className='component'>
